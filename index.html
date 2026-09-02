@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="โบรชัวร์เที่ยวจีน 7 วันสำหรับ 2 คน ช่วงคืน 16 ถึง 24 ตุลาคม 2026 พร้อมเทียบเส้นทาง จางเจียเจี้ย (Zhangjiajie), จิ่วจ้ายโกว (Jiuzhaigou), สี่ดรุณี (Mount Siguniang) และฉงชิ่งอู่หลง (Chongqing Wulong)">
-  <title>China Autumn 2026 · 4 เส้นทาง 7 วัน</title>
+  <meta name="description" content="โบรชัวร์เที่ยวจีนสำหรับ 2 คน ช่วงคืน 16 ถึง 24 ตุลาคม 2026 พร้อมแท็บเปรียบเทียบแผน 7 วัน, 6 วัน 5 คืน และ 5 วัน 4 คืน">
+  <title>China Autumn 2026 · แผน 7/6/5 วัน</title>
   <link rel="preconnect" href="https://commons.wikimedia.org">
   <link rel="preconnect" href="https://upload.wikimedia.org">
   <style>
@@ -181,6 +181,35 @@
       padding-left: 1.15rem;
     }
     .plan li { margin: 7px 0; }
+    .trip-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 22px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+    .tab-button {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--stone);
+      padding: 9px 15px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .tab-button[aria-selected="true"] {
+      background: #29362d;
+      border-color: #29362d;
+      color: var(--white);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.is-active { display: block; }
+    .tab-note {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
     .place-strip {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -409,8 +438,8 @@
   <header class="hero">
     <div class="hero-inner">
       <span class="kicker">China Autumn 2026</span>
-      <h1>จีน 7 วัน สำหรับ 2 คน</h1>
-      <p class="lead">เลือกทริปช่วงเดินทางได้ตั้งแต่คืนวันที่ 16 ถึง 24 ตุลาคม 2026 โดยดูความเหมาะสมจากฤดูใบไม้เปลี่ยนสี เวลาเดินทาง และราคาเที่ยวบินจริงที่พบจาก Trip.com ณ วันที่ 2 กันยายน 2026</p>
+      <h1>จีน 7 / 6 / 5 วัน สำหรับ 2 คน</h1>
+      <p class="lead">เปรียบเทียบแผนเที่ยวจีนช่วงคืนวันที่ 16 ถึง 24 ตุลาคม 2026 ตั้งแต่แผน 7 วันเดิม ไปจนถึง 6 วัน 5 คืน และ 5 วัน 4 คืนแบบแพ็กเกจทัวร์ โดยยังอ้างอิงราคาเที่ยวบินที่พบจาก Trip.com ณ วันที่ 2 กันยายน 2026</p>
       <div class="hero-pills">
         <span class="pill">A จางเจียเจี้ย (Zhangjiajie) + เฟิ่งหวง (Fenghuang)</span>
         <span class="pill">B จิ่วจ้ายโกว (Jiuzhaigou) + หวงหลง (Huanglong) + เฉิงตู (Chengdu)</span>
@@ -420,10 +449,10 @@
     </div>
     <div class="topline">
       <div class="topline-grid">
-        <div class="fact"><strong>ช่วงที่เหมาะสุด</strong><span>คืน 16 ต.ค. ถึง 23/24 ต.ค.</span></div>
-        <div class="fact"><strong>จำนวนวัน</strong><span>7 วัน 6 คืนในจีน หรือบินกลับเช้า 24</span></div>
+        <div class="fact"><strong>ช่วงที่เหมาะสุด</strong><span>คืน 16 ต.ค. ถึง 21-24 ต.ค.</span></div>
+        <div class="fact"><strong>จำนวนวัน</strong><span>เลือกแท็บ 7, 6 หรือ 5 วัน</span></div>
         <div class="fact"><strong>งบยังเป็นประมาณการ</strong><span>ต้องล็อกราคาอีกครั้งก่อนจอง</span></div>
-        <div class="fact"><strong>คำแนะนำหลัก</strong><span>B หรือ C เด่นสุดเรื่องใบไม้ปลายตุลา</span></div>
+        <div class="fact"><strong>คำแนะนำหลัก</strong><span>7 วันเลือก B/C · 6/5 วันเลือก C/D</span></div>
       </div>
     </div>
   </header>
@@ -434,19 +463,19 @@
       <div class="intro-grid">
         <div>
           <h2>วันเดินทางที่แนะนำ</h2>
-          <p>จากกรอบ “ออกได้ตั้งแต่คืน 16 ถึง 24 ตุลา” แผนที่ลงตัวที่สุดคือออกคืนวันศุกร์ 16 ต.ค. หรือเสาร์ 17 ต.ค. แล้วกลับศุกร์ 23 ต.ค. ดึก/เสาร์ 24 ต.ค. เช้า ได้เวลาเที่ยวครบ 7 วันโดยไม่ต้องลางานเพิ่มมากเกินจำเป็น และยังอยู่ในช่วงใบไม้เปลี่ยนสีของเสฉวนตอนเหนือ</p>
+          <p>จากกรอบ “ออกได้ตั้งแต่คืน 16 ถึง 24 ตุลา” ใช้ได้ 3 จังหวะ: แผน 7 วันเดิมสบายและมีวันกันชน, แผน 6 วัน 5 คืนตัดวันเมือง/วันเผื่อออกบางส่วน, และแผน 5 วัน 4 คืนแบบแพ็กเกจทัวร์ที่ออกเช้า ย้ายเมืองเร็ว และเก็บเฉพาะจุดหลัก</p>
           <table class="date-table">
             <thead><tr><th>ตัวเลือกวัน</th><th>เหมาะกับ</th><th>เหตุผล</th></tr></thead>
             <tbody>
-              <tr><td>16 ต.ค. กลางคืน - 23 ต.ค. ดึก</td><td>B, C, D</td><td>ใช้คืนแรกบนเครื่อง/ถึงจีนเช้า มีเวลาเที่ยวเต็มและบินกลับก่อนเสาร์</td></tr>
-              <tr><td>17 - 23 ต.ค.</td><td>A, B, C</td><td>นับในจีนชัดเจน 7 วัน 6 คืน จัดโรงแรมง่ายกว่า</td></tr>
-              <tr><td>17 - 24 ต.ค.</td><td>B, C, D</td><td>ยืดวันกลับเพื่อกันพลาดรถไฟ/รถต่อ เหมาะกับเส้นทางภูเขา</td></tr>
+              <tr><td>16 ต.ค. กลางคืน - 23/24 ต.ค.</td><td>7 วันเดิม</td><td>เที่ยวครบและมีวันกันชน เหมาะกับ B จิ่วจ้ายโกว (Jiuzhaigou)</td></tr>
+              <tr><td>16/17 - 22/23 ต.ค.</td><td>6 วัน 5 คืน</td><td>ยังไม่แน่นเกินไป เหมาะกับ C สี่ดรุณี (Mount Siguniang) หรือ D ฉงชิ่ง (Chongqing)</td></tr>
+              <tr><td>16/17 - 21/22 ต.ค.</td><td>5 วัน 4 คืน</td><td>สไตล์แพ็กเกจทัวร์ ต้องใช้ไฟลต์และรถต่อเวลาสวย</td></tr>
             </tbody>
           </table>
         </div>
         <aside class="callout">
-          <h3>เลือกหลัก: B จิ่วจ้ายโกว (Jiuzhaigou) หรือ C สี่ดรุณี (Mount Siguniang)</h3>
-          <p>ถ้าโจทย์คือธรรมชาติฤดูใบไม้ร่วง ปลายตุลาคมฝั่งเสฉวนมีโอกาสคุ้มกว่า A และ D ส่วน D ฉงชิ่ง (Chongqing) เหมาะเมื่ออยากได้เมืองกินกลางคืนผสมธรรมชาติอู่หลง (Wulong) โดยความเสี่ยงพื้นที่สูงน้อยกว่า B/C</p>
+          <h3>วิธีอ่านแผน</h3>
+          <p>ใช้แท็บ 7 วันเป็นแผนตั้งต้น ถ้าอยากลดงบให้ดูแท็บ 6 วันก่อน ส่วน 5 วันทำได้แบบทัวร์ แต่ต้องยอมรับว่าบางจุดจะเป็น “แวะครบ” มากกว่า “เที่ยวลึก” โดยเฉพาะ B จิ่วจ้ายโกว (Jiuzhaigou)</p>
           <p class="small">ราคาตั๋วที่พบจาก Trip.com เป็นราคา ณ วันที่ค้นหา ยังไม่ใช่การจองจริง และอาจเปลี่ยนตามโหลดที่นั่ง สัมภาระ และเวลาออกตั๋ว</p>
         </aside>
       </div>
@@ -480,7 +509,14 @@
 
     <section class="section">
       <span class="kicker">ROUTE OPTIONS</span>
-      <h2>ตัวเลือกทริป 7 วัน</h2>
+      <h2>ตัวเลือกทริปตามจำนวนวัน</h2>
+      <div class="trip-tabs" role="tablist" aria-label="เลือกระยะเวลาทริป">
+        <button class="tab-button" type="button" role="tab" aria-selected="true" aria-controls="plan-7" id="tab-7">7 วันเดิม</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="plan-6" id="tab-6">6 วัน 5 คืน</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="plan-5" id="tab-5">5 วัน 4 คืน</button>
+      </div>
+      <div class="tab-panel is-active" id="plan-7" role="tabpanel" aria-labelledby="tab-7">
+      <p class="tab-note">แผน 7 วันเดิม: จังหวะสบายกว่า มีวันเผื่อเดินทางและเก็บเมือง เหมาะที่สุดถ้าจะไป B จิ่วจ้ายโกว (Jiuzhaigou) แบบไม่รีบ</p>
       <div class="route-grid">
         <article class="route">
           <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Misty%20rock%20formations%20in%20Tianzi%20Mountain%20(%E5%A4%A9%E5%AD%90%E5%B1%B1%EF%BC%89.jpg?width=1400" alt="ภูเขาเทียนจื่อซาน จางเจียเจี้ย">
@@ -577,6 +613,27 @@
             </ol>
           </div>
         </article>
+      </div>
+      </div>
+
+      <div class="tab-panel" id="plan-6" role="tabpanel" aria-labelledby="tab-6">
+      <p class="tab-note">แผน 6 วัน 5 คืน: ตัดวันเมืองหรือวันกันชนออก 1 วัน ยังพอเที่ยวครบจุดหลักโดยไม่แน่นแบบทัวร์เต็มตัว</p>
+      <div class="route-grid">
+        <article class="route"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Misty%20rock%20formations%20in%20Tianzi%20Mountain%20(%E5%A4%A9%E5%AD%90%E5%B1%B1%EF%BC%89.jpg?width=1400" alt="ภูเขาเทียนจื่อซาน จางเจียเจี้ย"><div class="route-body"><h3>A · จางเจียเจี้ย (Zhangjiajie) + เฟิ่งหวง (Fenghuang)</h3><p>บีบด้วยการตัดวันสะพานกระจกหรือวันพักเมืองออก ให้เฟิ่งหวงเหลือ 1 คืน</p><ol class="plan"><li><strong>Day 1:</strong> บินเข้า จางเจียเจี้ย (Zhangjiajie) แล้วต่อเข้าอู่หลิงหยวน (Wulingyuan)</li><li><strong>Day 2:</strong> อุทยานจางเจียเจี้ย (Zhangjiajie National Forest Park): ลิฟต์ไป่หลง (Bailong Elevator), หยวนเจียเจี้ย (Yuanjiajie), เทียนจื่อซาน (Tianzi Mountain)</li><li><strong>Day 3:</strong> ลำธารจินเปียนซี (Golden Whip Stream) ครึ่งวัน แล้วย้ายเข้าเมืองจางเจียเจี้ย</li><li><strong>Day 4:</strong> ภูเขาเทียนเหมินซาน (Tianmen Mountain) แล้วเดินทางไปเฟิ่งหวง (Fenghuang)</li><li><strong>Day 5:</strong> เมืองโบราณเฟิ่งหวง (Fenghuang Ancient Town) เช้า บ่ายกลับจางเจียเจี้ย/ฉางซา</li><li><strong>Day 6:</strong> บินกลับไทย</li></ol></div></article>
+        <article class="route"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jiuzhaigou%20Sichuan%20China%20Shuzheng-Lakes-01.jpg?width=1400" alt="ทะเลสาบซู่เจิ้ง จิ่วจ้ายโกว"><div class="route-body"><h3>B · จิ่วจ้ายโกว (Jiuzhaigou) + หวงหลง (Huanglong)</h3><p>ยังทำได้ แต่ต้องลดจิ่วจ้ายโกวเหลือ 1 วันเต็มหรือเที่ยววันที่สองแบบครึ่งวัน</p><ol class="plan"><li><strong>Day 1:</strong> บินเข้าเฉิงตู (Chengdu) พักใกล้สถานีรถไฟหรือชุนซีลู่</li><li><strong>Day 2:</strong> รถไฟ/รถไปหวงหลง (Huanglong) แล้วเข้าพักใกล้จิ่วจ้ายโกว</li><li><strong>Day 3:</strong> จิ่วจ้ายโกว (Jiuzhaigou) เต็มวัน เน้นรื่อเจ๋อ (Rize Valley) และซู่เจิ้ง (Shuzheng Valley)</li><li><strong>Day 4:</strong> เก็บจิ่วจ้ายโกวครึ่งวันหรือพักเบา ๆ แล้วเริ่มเดินทางกลับ</li><li><strong>Day 5:</strong> กลับเฉิงตู (Chengdu) เย็นเดินไท่กู่หลี่ (Taikoo Li)</li><li><strong>Day 6:</strong> แพนด้าเฉิงตู (Chengdu Panda Base) ครึ่งวัน แล้วบินกลับ</li></ol></div></article>
+        <article class="route"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1%20-%20panoramio%20(1).jpg?width=1400" alt="ภูเขาสี่ดรุณี"><div class="route-body"><h3>C · หุบเขาสี่ดรุณี (Mount Siguniang)</h3><p>เป็นแผน 6 วันที่ลงตัวมาก: เลือกซวงเฉียวโกวเป็นหลัก แล้วตัดหุบเขาที่ต้องเดินหนักออก</p><ol class="plan"><li><strong>Day 1:</strong> บินเข้าเฉิงตู (Chengdu) เตรียมของกันหนาว</li><li><strong>Day 2:</strong> เดินทางสู่รื่อหลง (Rilong) ผ่านตูเจียงเยี่ยน (Dujiangyan) ถ้าเวลาเอื้อ</li><li><strong>Day 3:</strong> หุบเขาซวงเฉียวโกว (Shuangqiao Valley) เต็มวัน</li><li><strong>Day 4:</strong> หุบเขาฉางผิงโกว (Changping Valley) แบบครึ่งวัน หรือพักถ่ายรูปในเมืองรื่อหลง</li><li><strong>Day 5:</strong> กลับเฉิงตู เย็นเดินชุนซีลู่ (Chunxi Road)</li><li><strong>Day 6:</strong> เฉิงตูครึ่งวัน แล้วบินกลับไทย</li></ol></div></article>
+        <article class="route"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Raffles%20City%20of%20Chongqing.jpg?width=1400" alt="ราฟเฟิลส์ซิตี้ ฉงชิ่ง"><div class="route-body"><h3>D · ฉงชิ่ง (Chongqing) + อู่หลง (Wulong)</h3><p>คุมเวลาและงบง่ายที่สุดในแผน 6 วัน เพราะไม่ต้องย้อนหลายเมือง</p><ol class="plan"><li><strong>Day 1:</strong> บินเข้าฉงชิ่ง (Chongqing) เดินหงหยาต้ง (Hongya Cave)</li><li><strong>Day 2:</strong> เจี่ยฟ่างเปย (Jiefangbei), ราฟเฟิลส์ซิตี้ (Raffles City), หลี่จื่อป้า (Liziba)</li><li><strong>Day 3:</strong> เดินทางไปอู่หลง (Wulong) พักเมืองเซียนหนวี่ซาน (Fairy Mountain Town)</li><li><strong>Day 4:</strong> สะพานสวรรค์สามแห่ง (Three Natural Bridges) + ช่องเขาหลงสุ่ย (Longshuixia Fissure Gorge)</li><li><strong>Day 5:</strong> กลับฉงชิ่ง เก็บฉือชี่โข่ว (Ciqikou) หรือหลงเหมินห่าว (Longmenhao)</li><li><strong>Day 6:</strong> ซื้อของฝากและบินกลับไทย</li></ol></div></article>
+      </div>
+      </div>
+
+      <div class="tab-panel" id="plan-5" role="tabpanel" aria-labelledby="tab-5">
+      <p class="tab-note">แผน 5 วัน 4 คืน: สไตล์แพ็กเกจทัวร์จริง ๆ ต้องออกเช้า กลับดึก และเลือกเฉพาะจุดไฮไลต์ เหมาะกับ D มากที่สุด รองลงมาคือ C</p>
+      <div class="route-grid">
+        <article class="route"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Misty%20rock%20formations%20in%20Tianzi%20Mountain%20(%E5%A4%A9%E5%AD%90%E5%B1%B1%EF%BC%89.jpg?width=1400" alt="ภูเขาเทียนจื่อซาน จางเจียเจี้ย"><div class="route-body"><h3>A · จางเจียเจี้ย (Zhangjiajie) + เฟิ่งหวง (Fenghuang)</h3><p>ทำได้ถ้าไฟลต์ดี แต่ต้องตัดสะพานกระจกและบีบเฟิ่งหวงเป็นช่วงเย็นถึงเช้า</p><ol class="plan"><li><strong>Day 1:</strong> บินเข้าและต่อเข้าอู่หลิงหยวน (Wulingyuan)</li><li><strong>Day 2:</strong> อุทยานจางเจียเจี้ย (Zhangjiajie National Forest Park) เต็มวัน</li><li><strong>Day 3:</strong> ภูเขาเทียนเหมินซาน (Tianmen Mountain) แล้วไปเฟิ่งหวง (Fenghuang)</li><li><strong>Day 4:</strong> เฟิ่งหวงเช้า แล้วกลับจางเจียเจี้ย/ฉางซา</li><li><strong>Day 5:</strong> บินกลับไทย</li></ol></div></article>
+        <article class="route"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jiuzhaigou%20Sichuan%20China%20Shuzheng-Lakes-01.jpg?width=1400" alt="ทะเลสาบซู่เจิ้ง จิ่วจ้ายโกว"><div class="route-body"><h3>B · จิ่วจ้ายโกว (Jiuzhaigou) + หวงหลง (Huanglong)</h3><p>แบบแพ็กเกจทัวร์ทำได้ แต่เหนื่อยสุดและจิ่วจ้ายโกวเหลือวันเดียว</p><ol class="plan"><li><strong>Day 1:</strong> บินเข้าเฉิงตู (Chengdu)</li><li><strong>Day 2:</strong> เดินทางไปหวงหลง (Huanglong) แล้วเข้าจิ่วจ้ายโกว</li><li><strong>Day 3:</strong> จิ่วจ้ายโกว (Jiuzhaigou) เต็มวัน</li><li><strong>Day 4:</strong> เดินทางกลับเฉิงตู เย็นเดินเมือง</li><li><strong>Day 5:</strong> แพนด้าเฉิงตูครึ่งวันหรือซื้อของฝาก แล้วบินกลับ</li></ol></div></article>
+        <article class="route"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%E5%9B%9B%E5%A7%91%E5%A8%98%E5%B1%B1%20-%20panoramio%20(1).jpg?width=1400" alt="ภูเขาสี่ดรุณี"><div class="route-body"><h3>C · หุบเขาสี่ดรุณี (Mount Siguniang)</h3><p>เหมาะกับ 5 วันถ้าเน้นซวงเฉียวโกวเป็นจุดหลักและใช้รถส่วนตัว</p><ol class="plan"><li><strong>Day 1:</strong> บินเข้าเฉิงตู (Chengdu)</li><li><strong>Day 2:</strong> เดินทางไปรื่อหลง (Rilong) / สี่ดรุณี</li><li><strong>Day 3:</strong> หุบเขาซวงเฉียวโกว (Shuangqiao Valley) เต็มวัน</li><li><strong>Day 4:</strong> กลับเฉิงตู แวะตูเจียงเยี่ยน (Dujiangyan) ถ้าเวลาไหว</li><li><strong>Day 5:</strong> เฉิงตูครึ่งวันและบินกลับไทย</li></ol></div></article>
+        <article class="route"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Raffles%20City%20of%20Chongqing.jpg?width=1400" alt="ราฟเฟิลส์ซิตี้ ฉงชิ่ง"><div class="route-body"><h3>D · ฉงชิ่ง (Chongqing) + อู่หลง (Wulong)</h3><p>แนะนำสุดสำหรับ 5 วัน เพราะเป็นเมืองเดียวบวก day trip ธรรมชาติที่จัดแน่นได้</p><ol class="plan"><li><strong>Day 1:</strong> บินเข้าฉงชิ่ง เดินเจี่ยฟ่างเปย (Jiefangbei) + หงหยาต้ง (Hongya Cave)</li><li><strong>Day 2:</strong> หลี่จื่อป้า (Liziba), ราฟเฟิลส์ซิตี้ (Raffles City), ฉือชี่โข่ว (Ciqikou)</li><li><strong>Day 3:</strong> ออกเช้าไปอู่หลง: สะพานสวรรค์สามแห่ง (Three Natural Bridges) + ช่องเขาหลงสุ่ย (Longshuixia Fissure Gorge)</li><li><strong>Day 4:</strong> เก็บหลงเหมินห่าว (Longmenhao), หวงเจวี๋ยผิง (Huangjueping) หรือเรือชมแม่น้ำ</li><li><strong>Day 5:</strong> ซื้อของฝากและบินกลับไทย</li></ol></div></article>
+      </div>
       </div>
     </section>
 
@@ -721,7 +778,7 @@
     <section class="section" id="budget">
       <span class="kicker">ESTIMATED TRIP BUDGET</span>
       <h2>ประมาณการค่าใช้จ่าย</h2>
-      <p>รวม 2 คน · พักห้องเดียวกัน 6 คืน · หน่วยเป็นบาท · ราคายังเป็นประมาณการและยังไม่ใช่ราคาจองจริง</p>
+      <p>ตารางแรกเป็นแผน 7 วันเดิม · รวม 2 คน · พักห้องเดียวกัน 6 คืน · หน่วยเป็นบาท · ราคายังเป็นประมาณการและยังไม่ใช่ราคาจองจริง</p>
       <div class="budget-wrap">
         <table>
           <thead>
@@ -764,6 +821,25 @@
         <strong>ข้อสรุปงบ 6 วัน 5 คืน</strong>
         <p>ถ้าต้องลดเหลือ 6 วันจริง แนะนำ C สี่ดรุณี (Mount Siguniang) เป็นตัวเลือกธรรมชาติที่ยังลงตัวที่สุด หรือ D ฉงชิ่ง (Chongqing) + อู่หลง (Wulong) ถ้าอยากคุมงบและเดินทางสบาย โดยให้ล็อกวันอู่หลงเป็นสะพานสวรรค์สามแห่ง (Three Natural Bridges) + ช่องเขาหลงสุ่ย (Longshuixia Fissure Gorge) ส่วน B จิ่วจ้ายโกว (Jiuzhaigou) ควรทำ 7 วันมากกว่า เพราะค่าเดินทางสูงและใช้เวลาเยอะ</p>
       </div>
+      <h3>ถ้าบีบเป็น 5 วัน 4 คืนแบบแพ็กเกจทัวร์</h3>
+      <p class="small">งบลดจากที่พักอีก 1 คืนและอาหาร/รถบางส่วน แต่ต้องแลกกับไฟลต์เวลาสวย รถรับส่งที่แน่นขึ้น และอาจต้องใช้รถส่วนตัวมากขึ้นในบางเส้นทาง</p>
+      <div class="budget-wrap">
+        <table>
+          <thead>
+            <tr><th>เส้นทาง</th><th>สิ่งที่ต้องบีบ</th><th>งบใหม่โดยประมาณสำหรับ 2 คน</th><th>ความเห็น</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>A จางเจียเจี้ย (Zhangjiajie) + เฟิ่งหวง (Fenghuang)</td><td>ตัดสะพานกระจก แยกจางเจียเจี้ยเป็นอุทยาน 1 วัน + เทียนเหมินซาน 1 วัน และให้เฟิ่งหวงอยู่ช่วงเย็นถึงเช้า</td><td>31,500-47,000</td><td>ทำได้แบบทัวร์ แต่เสี่ยงรีบถ้าไฟลต์ DYG ไม่ดี</td></tr>
+            <tr><td>B จิ่วจ้ายโกว (Jiuzhaigou) + หวงหลง (Huanglong)</td><td>เหลือจิ่วจ้ายโกว 1 วันเต็ม หวงหลง 1 วัน และไม่มีวันพักเฉิงตูจริงจัง</td><td>32,500-49,500</td><td>เหนื่อยสุดในกลุ่ม 5 วัน เพราะทางไกลและค่ารถต่อยังสูง</td></tr>
+            <tr><td>C สี่ดรุณี (Mount Siguniang) + เฉิงตู (Chengdu)</td><td>เน้นหุบเขาซวงเฉียวโกว (Shuangqiao Valley) เป็นหลัก ตัดฉางผิงโกว/ไห่จื่อโกว</td><td>30,500-48,000</td><td>ยังสมเหตุสมผลถ้าใช้รถส่วนตัวและรับวันรถยาวได้</td></tr>
+            <tr><td>D ฉงชิ่ง (Chongqing) + อู่หลง (Wulong)</td><td>รวมสะพานสวรรค์สามแห่ง (Three Natural Bridges) + ช่องเขาหลงสุ่ย (Longshuixia Fissure Gorge) เป็น day trip หรือค้างอู่หลง 1 คืน</td><td>27,500-46,500</td><td>เหมาะที่สุดสำหรับ 5 วัน คุมเมือง/ธรรมชาติได้ครบกว่าเส้นทางอื่น</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reserve">
+        <strong>ข้อสรุปงบ 5 วัน 4 คืน</strong>
+        <p>ถ้าตั้งใจทำสั้นแบบแพ็กเกจทัวร์ แนะนำ D ฉงชิ่ง (Chongqing) + อู่หลง (Wulong) ก่อน เพราะได้เมือง อาหารกลางคืน และธรรมชาติชัดในเวลาสั้น ส่วน C เป็นตัวเลือกธรรมชาติที่ยังดี แต่ควรใช้รถส่วนตัวเพื่อลดเวลารอรถ</p>
+      </div>
     </section>
 
     <section class="section sources">
@@ -784,7 +860,7 @@
 
   <footer>
     <span>CHINA / AUTUMN 2026</span>
-    <span>7 วัน · ช่วงคืน 16 ถึง 24 ตุลาคม · ค่าใช้จ่ายอยู่ท้ายหน้า</span>
+    <span>แผน 7 / 6 / 5 วัน · ช่วงคืน 16 ถึง 24 ตุลาคม · ค่าใช้จ่ายอยู่ท้ายหน้า</span>
   </footer>
   <script>
     const gallery = document.querySelector(".gallery");
@@ -834,6 +910,18 @@
       gallery.addEventListener("scroll", () => window.requestAnimationFrame(updateDots), { passive: true });
       updateDots();
     }
+
+    document.querySelectorAll(".tab-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetId = button.getAttribute("aria-controls");
+        document.querySelectorAll(".tab-button").forEach((tab) => {
+          tab.setAttribute("aria-selected", tab === button ? "true" : "false");
+        });
+        document.querySelectorAll(".tab-panel").forEach((panel) => {
+          panel.classList.toggle("is-active", panel.id === targetId);
+        });
+      });
+    });
 
     document.querySelectorAll(".gallery img, .route > img, .mini-photo img").forEach((img) => {
       img.tabIndex = 0;

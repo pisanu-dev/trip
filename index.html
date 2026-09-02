@@ -181,6 +181,29 @@
       padding-left: 1.15rem;
     }
     .plan li { margin: 7px 0; }
+    .place-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin: 16px 0 18px;
+    }
+    .mini-photo {
+      position: relative;
+      min-height: 118px;
+      border-radius: 7px;
+      overflow: hidden;
+      background: #d8ded7;
+    }
+    .mini-photo span {
+      position: absolute;
+      left: 9px;
+      right: 9px;
+      bottom: 8px;
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 700;
+      text-shadow: 0 1px 7px rgba(0,0,0,.7);
+    }
     .gallery {
       display: grid;
       grid-template-columns: 1.3fr .85fr .85fr;
@@ -236,6 +259,27 @@
     }
     .flight strong { display: block; margin-bottom: 6px; color: var(--rust); }
     .small { color: var(--muted); font-size: .92rem; }
+    .stay-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .stay {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 10px 28px rgba(34, 39, 34, .08);
+    }
+    .stay h3 { margin-bottom: 6px; color: var(--stone); }
+    .stay ul { margin: 10px 0 0; padding-left: 1.1rem; }
+    .stay li { margin: 6px 0; }
+    .stay em {
+      display: block;
+      color: var(--muted);
+      font-style: normal;
+      font-size: .9rem;
+    }
     .budget-wrap { overflow-x: auto; padding-bottom: 4px; }
     .budget-wrap table { min-width: 940px; }
     tfoot td { background: #29362d; color: var(--white); font-weight: 700; }
@@ -262,10 +306,11 @@
 
     @media (max-width: 860px) {
       .hero { min-height: 92vh; }
-      .topline-grid, .intro-grid, .route-grid, .notes, .flight-grid { grid-template-columns: 1fr; }
+      .topline-grid, .intro-grid, .route-grid, .notes, .flight-grid, .stay-grid { grid-template-columns: 1fr; }
       .fact { border-left: 0; border-top: 1px solid rgba(255,255,255,.2); }
       .gallery { grid-template-columns: 1fr; grid-auto-rows: 230px; }
       .photo.large { grid-row: span 1; }
+      .place-strip { grid-template-columns: 1fr; }
       footer { flex-direction: column; }
     }
   </style>
@@ -339,6 +384,11 @@
             <h3>A · จางเจียเจี้ย + เฟิ่งหวง</h3>
             <p>เหมาะกับคนชอบภูเขาหินแบบอลังการ เมืองโบราณกลางคืน และแลนด์มาร์กชัด ๆ แต่เที่ยวบินไป DYG มักต้องต่อเครื่องและเสียเวลาเดินทางมากกว่าเสฉวน</p>
             <div class="tag-row"><span class="tag">ภูเขา</span><span class="tag">กระเช้า</span><span class="tag">เมืองโบราณ</span></div>
+            <div class="place-strip">
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Zhangjiajie_National_Forest_Park_37829-Zhangjiajie_(48757250168).jpg?width=700" alt="Zhangjiajie National Forest Park"><span>Forest Park</span></figure>
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tianmen%20Mountain%20Heaven%20Gate%20arch%20Zhangjiajie.jpg?width=700" alt="Tianmen Mountain Heaven Gate"><span>Tianmen Mountain</span></figure>
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fenghuang_County_night_view_20190727.jpg?width=700" alt="Fenghuang Ancient Town"><span>Fenghuang</span></figure>
+            </div>
             <ol class="plan">
               <li>บินกรุงเทพฯ - จางเจียเจี้ย ผ่านกว่างโจว/เฉิงตู พัก Wulingyuan</li>
               <li>เที่ยว Zhangjiajie National Forest Park ฝั่ง Yuanjiajie และ Tianzi Mountain</li>
@@ -357,6 +407,11 @@
             <h3>B · จิ่วจ้ายโกว + หวงหลง + เฉิงตู</h3>
             <p>ตัวเลือกเด่นสุดสำหรับสีใบไม้ น้ำสีฟ้า และวิวธรรมชาติปลายตุลา ควรใช้เฉิงตูเป็นฐานเพราะเที่ยวบินกรุงเทพฯ - เฉิงตูมีตัวเลือกตรงและราคาดีกว่า</p>
             <div class="tag-row"><span class="tag">ใบไม้เปลี่ยนสี</span><span class="tag">ทะเลสาบ</span><span class="tag">รถไฟเร็วสูง</span></div>
+            <div class="place-strip">
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/1_jiuzhaigou_valley_wu_hua_hai_2011b.jpg?width=700" alt="Jiuzhaigou Five Flower Lake"><span>Jiuzhaigou</span></figure>
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/1_huanglong_pools_aerial_2011.jpg?width=700" alt="Huanglong pools"><span>Huanglong</span></figure>
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chunxi%20Road%202025%201.jpg?width=700" alt="Chunxi Road Chengdu"><span>Chengdu</span></figure>
+            </div>
             <ol class="plan">
               <li>บินกลางคืน/เช้าเข้าเฉิงตู พัก Chunxi Road หรือใกล้ Chengdu East</li>
               <li>รถไฟ Chengdu East - Huanglongjiuzhai ต่อรถไปหวงหลง แล้วไปพักจิ่วจ้ายโกว</li>
@@ -375,6 +430,11 @@
             <h3>C · หุบเขาสี่ดรุณี + เฉิงตู</h3>
             <p>เพิ่มตัวเลือกภูเขาหิมะและหุบเขาสไตล์อัลไพน์ เดินทางจากเฉิงตูด้วยรถประมาณ 4-5 ชั่วโมง เหมาะถ้าอยากได้วิวสูงใหญ่แต่ไม่อยากบินต่อไปจิ่วจ้ายโกว</p>
             <div class="tag-row"><span class="tag">ภูเขาหิมะ</span><span class="tag">Shuangqiao Valley</span><span class="tag">วิวถ่ายรูป</span></div>
+            <div class="place-strip">
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Siguniang_-_4_Sisters.jpg?width=700" alt="Mount Siguniang peaks"><span>Mount Siguniang</span></figure>
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shuangqiaogou%20overlook.jpg?width=700" alt="Shuangqiao Valley overlook"><span>Shuangqiao Valley</span></figure>
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dujiangyan_Irrigation_System.jpg?width=700" alt="Dujiangyan Irrigation System"><span>Dujiangyan</span></figure>
+            </div>
             <ol class="plan">
               <li>บินเข้าเฉิงตู พักในเมือง</li>
               <li>รถส่วนตัว/รถบัสไป Rilong Town ใกล้ Mount Siguniang</li>
@@ -393,6 +453,11 @@
             <h3>D · ฉงชิ่ง + อู่หลง/ต้าจู๋</h3>
             <p>เมืองใหญ่สนุก เดินทางง่ายกว่าเส้นทางภูเขา เหมาะกับสายกิน ชมเมืองกลางคืน รถไฟฟ้า และทริปวันเดย์ธรรมชาติอย่าง Wulong Karst หรือมรดกโลกต้าจู๋</p>
             <div class="tag-row"><span class="tag">เมือง</span><span class="tag">อาหาร</span><span class="tag">กลางคืน</span><span class="tag">Day trip</span></div>
+            <div class="place-strip">
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/202308%20Hongya%20Cave%20at%20night%20from%20Qiansimen%20Bridge.jpg?width=700" alt="Hongya Cave Chongqing"><span>Hongya Cave</span></figure>
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Three%20Natural%20Bridges.jpg?width=700" alt="Three Natural Bridges Wulong"><span>Wulong Karst</span></figure>
+              <figure class="mini-photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lying%20Buddha%2C%20Dazu%20Rock%20Carvings.JPG?width=700" alt="Dazu Rock Carvings"><span>Dazu</span></figure>
+            </div>
             <ol class="plan">
               <li>บินกรุงเทพฯ - ฉงชิ่ง พัก Jiefangbei</li>
               <li>Hongya Cave, Qiansimen Bridge, Chaotianmen, Raffles City</li>
@@ -405,6 +470,111 @@
           </div>
         </article>
       </div>
+    </section>
+
+    <section class="section" id="hotels">
+      <span class="kicker">WHERE TO STAY</span>
+      <h2>ที่พักแนะนำตามจุดพัก</h2>
+      <p>เลือกโรงแรมจากย่านที่ช่วยลดเวลาเดินทางจริง: ใกล้ประตูอุทยาน ใกล้กระเช้า ใกล้สถานีรถไฟ หรือใกล้โซนเดินกินกลางคืน รายชื่อด้านล่างเป็นตัวเลือกตั้งต้น ควรตรวจราคา ห้องว่าง สาขา และรีวิวล่าสุดอีกครั้งก่อนจอง</p>
+      <div class="stay-grid">
+        <article class="stay">
+          <h3>Wulingyuan / Zhangjiajie Forest Park</h3>
+          <em>เหมาะกับ A คืนที่เที่ยวอุทยานหลัก</em>
+          <ul>
+            <li>FUNGEE S Hotel, Wulingyuan Sign Gate</li>
+            <li>JI Hotel Zhangjiajie National Forest Park Wulingyuan Biaozhimen</li>
+            <li>Manyuan Resort Hotel</li>
+            <li>Pullman Zhangjiajie</li>
+            <li>Ibis Hotel Zhangjiajie National Forest Park Entrance</li>
+          </ul>
+        </article>
+        <article class="stay">
+          <h3>Zhangjiajie City / Tianmen Cableway</h3>
+          <em>เหมาะกับ A คืนก่อนหรือหลัง Tianmen Mountain</em>
+          <ul>
+            <li>Hampton by Hilton Zhangjiajie Tianmen Mountain</li>
+            <li>Atour Hotel Tianmenshan Cableway Station</li>
+            <li>Home2 Suites by Hilton Zhangjiajie Tianmen Mountain</li>
+            <li>Jinjiang Metropolo Tianmen Mountain Cableway Station</li>
+          </ul>
+        </article>
+        <article class="stay">
+          <h3>Fenghuang Ancient Town</h3>
+          <em>เหมาะกับ A คืนเมืองโบราณ</em>
+          <ul>
+            <li>FengHuang Mengqi Stilted Building River View Homestay</li>
+            <li>Kechao Light Luxury Hotel Hongqiao Branch</li>
+            <li>Phoenix Wanfeng Yushe Light Luxury Homestay</li>
+            <li>Mount Villa By T Residence</li>
+            <li>Wyndham Grand Plaza Royale Hot Springs Resort</li>
+          </ul>
+        </article>
+        <article class="stay">
+          <h3>Chengdu / Chunxi Road - Taikoo Li</h3>
+          <em>ฐานเมืองสำหรับ B และ C</em>
+          <ul>
+            <li>Chilling Time Hotel Chunxi Road IFS Branch</li>
+            <li>Laizhu Xingchen Hotel Chengdu Chunxi Road</li>
+            <li>Summer Island Service Apartment Chengdu Taikoo Li</li>
+            <li>Grand Hyatt Chengdu</li>
+            <li>HAZENS HOTEL Chunxi Road Tianfu Square</li>
+          </ul>
+        </article>
+        <article class="stay">
+          <h3>Jiuzhaigou Scenic Area Entrance</h3>
+          <em>เหมาะกับ B เพื่อเข้าคิวอุทยานเช้า</em>
+          <ul>
+            <li>Rezen Retreat Four Seasons Manju Hotel</li>
+            <li>Holiday Inn Express JIUZHAIGOU by IHG</li>
+            <li>Grand Rezen Jiuzhaigou Resort</li>
+            <li>Private Enjoy Travel Hotel Jiuzhaigou Scenic Area</li>
+            <li>Jiuzhaigou Scenic Area Visitor Center Manxin Hotel</li>
+          </ul>
+        </article>
+        <article class="stay">
+          <h3>Rilong / Mount Siguniang</h3>
+          <em>เหมาะกับ C คืนใกล้หุบเขาสี่ดรุณี</em>
+          <ul>
+            <li>Ji Hotel Siguniang Mountain Scenic Area Branch</li>
+            <li>Buyan Four Seasons Oxygen Mountain Residence</li>
+            <li>Songgema Snow Nest Hotel</li>
+            <li>Mid-mountain Hotel</li>
+            <li>Lvxiang Snow-Mountain View Meditate Hotel</li>
+          </ul>
+        </article>
+        <article class="stay">
+          <h3>Chongqing / Jiefangbei - Hongya Cave</h3>
+          <em>เหมาะกับ D เดินเที่ยวกลางคืน</em>
+          <ul>
+            <li>Chongqing Jiefangbei Hongya Cave Houju High-altitude River-view Hotel</li>
+            <li>Glenview ITC Plaza Chongqing</li>
+            <li>Somerset Yangtze River Chongqing</li>
+            <li>Asiam International Hotel Chongqing Jiefangbei Hongya Cave</li>
+            <li>Atour Hotel Chongqing Jiefangbei Hongya Cave River View</li>
+          </ul>
+        </article>
+        <article class="stay">
+          <h3>Wulong / Fairy Mountain Town</h3>
+          <em>ทางเลือกถ้า D ไม่อยากทำ Wulong แบบไปเช้าเย็นกลับ</em>
+          <ul>
+            <li>Daweiying Holiday Hotel</li>
+            <li>Fairy Mountain Huapont Hotel</li>
+            <li>Yunhai Hotel</li>
+            <li>Shoyiri-La Hotel Fairy Mountain Visitor Center</li>
+            <li>Chongqing Wulong Yiqi Hotel Xiannvshan Tourist Center</li>
+          </ul>
+        </article>
+        <article class="stay">
+          <h3>Dazu / Chongqing West Side</h3>
+          <em>ส่วนใหญ่ทำ day trip จากฉงชิ่งได้</em>
+          <ul>
+            <li>แนะนำพัก Jiefangbei แล้วจอง day trip/รถไปกลับ</li>
+            <li>ถ้าค้าง Dazu ให้เลือกโรงแรมใน Dazu District ใกล้สถานีรถ/ทางไป Baodingshan</li>
+            <li>ตรวจเวลาเปิด Baodingshan และ Beishan ก่อนล็อกคืนพัก</li>
+          </ul>
+        </article>
+      </div>
+      <p class="small">หมายเหตุ: โรงแรมบางแห่งมีชื่อภาษาอังกฤษหลายแบบในแต่ละเว็บจอง ควรเทียบพิกัดกับแผนที่และดูรีวิวภาษาอังกฤษ/จีนล่าสุด โดยเฉพาะเรื่องลิฟต์ ฮีตเตอร์ ออกซิเจนในห้อง รถรับส่ง และระยะลากกระเป๋า</p>
     </section>
 
     <div class="band">
@@ -472,7 +642,8 @@
     <section class="section sources">
       <h2>แหล่งข้อมูลและเครดิตภาพ</h2>
       <p>ข้อมูลเที่ยวบินอ้างอิงจากผลค้นหา Trip.com ณ 2 ก.ย. 2026: <a href="https://ph.trip.com/flights/airport-bkk-city-ctu/">BKK - Chengdu</a>, <a href="https://th.trip.com/flights/airport-bkk-city-dyg/">BKK - Zhangjiajie</a>, <a href="https://ca.trip.com/flights/city-bkk-airport-ckg/">Bangkok - Chongqing</a>. ข้อมูลเส้นทางรถไฟ/อุทยานควรตรวจซ้ำใกล้วันจอง</p>
-      <p>ภาพจาก Wikimedia Commons ผ่าน Special:FilePath: Zhangjiajie โดย xiquinhosilva, Fenghuang โดย Sunyiming, Jiuzhaigou และ Huanglong โดย Chensiyuan, Mount Siguniang โดย Johannes Bockh, Hongya Cave จากหมวด Wikimedia Commons. รูปใช้เพื่อแสดงบรรยากาศ ไม่รับประกันสภาพอากาศ สีใบไม้ หรือทัศนวิสัยในวันเดินทางจริง</p>
+      <p>ข้อมูลที่พักอ้างอิงจากผลค้นหา Trip.com ณ 2 ก.ย. 2026: <a href="https://www.trip.com/hotels/zhangjiajie-zhangjiajie-national-forest-park/hotels-c27m4192823/">Zhangjiajie Forest Park</a>, <a href="https://us.trip.com/hotels/zhangjiajie-tianmen-mountain-cableway/hotels-c27m4343343/">Tianmen Cableway</a>, <a href="https://ph.trip.com/hotels/fenghuang-phoenix-ancient-town/hotels-c866m4203646/">Fenghuang Ancient Town</a>, <a href="https://us.trip.com/hotels/chengdu-chunxi-road/hotels-c28m4195316/">Chengdu Chunxi Road</a>, <a href="https://us.trip.com/hotels/jiuzhaigou-jiuzhai-scenic-spot/hotels-c91m4192960/">Jiuzhaigou National Park</a>, <a href="https://www.trip.com/hotels/xiaojin-rilong-town/hotels-c21609m4206724/">Rilong / Mount Siguniang</a>, <a href="https://ca.trip.com/hotels/chongqing-hotels-list-4/zone100/">Chongqing Jiefangbei</a>, <a href="https://www.trip.com/hotels/chongqing-fairy-mountain-town/hotels-c4m6672442/">Wulong Fairy Mountain Town</a>.</p>
+      <p>ภาพจาก Wikimedia Commons ผ่าน Special:FilePath: Zhangjiajie โดย xiquinhosilva, Fenghuang โดย Sunyiming, Jiuzhaigou และ Huanglong โดย Chensiyuan, Mount Siguniang โดย Johannes Bockh, Tianmen Mountain, Shuangqiao Valley, Dujiangyan, Hongya Cave, Wulong Three Natural Bridges และ Dazu Rock Carvings จากหมวด Wikimedia Commons. รูปใช้เพื่อแสดงบรรยากาศ ไม่รับประกันสภาพอากาศ สีใบไม้ หรือทัศนวิสัยในวันเดินทางจริง</p>
     </section>
   </main>
 

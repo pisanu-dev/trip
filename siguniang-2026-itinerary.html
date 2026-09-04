@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ทริปสี่ดรุณี ต.ค. 2026</title>
 <meta name="description" content="แผนเที่ยวภูเขาสี่ดรุณี 6 วัน 5 คืน ด้วยรถบัส + รถไฟฟ้า + DiDi พร้อมตัวเลือกที่พักและตารางค่าใช้จ่าย">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -214,7 +219,34 @@
   footer a { word-break: break-all; }
 
   .disclaimer { font-size: .82rem; color: var(--ink-soft); font-style: italic; margin-top: .6rem; }
+
+  /* ---- phones ---- */
+  @media (max-width: 640px) {
+    body { font-size: .97rem; line-height: 1.66; }
+    .wrap { padding: 0 .95rem 3.5rem; }
+    section { padding-top: 2rem; }
+    h2 { font-size: 1.24rem; gap: .45rem; }
+    h3 { font-size: 1.02rem; }
+    .lede { font-size: .92rem; margin-bottom: 1rem; }
+    header.hero .inner { padding: 2rem .95rem 1.7rem; }
+    header.hero .ridge { height: 78px; }
+    .kicker { font-size: .9rem; }
+    nav.chips ul { padding: .5rem .95rem; gap: .35rem; }
+    nav.chips a { padding: .42rem .8rem; font-size: .82rem; }
+    table { font-size: .84rem; }
+    th, td { padding: .5rem .6rem; }
+    thead th { font-size: .78rem; }
+    .callout { padding: .8rem .9rem; }
+    ul, ol { padding-left: 1.05rem; }
+    .day { grid-template-columns: 2.1rem 1fr; gap: .7rem; }
+    .day::before { left: 1.05rem; top: 2.1rem; }
+    .day-mark { width: 2.1rem; height: 2.1rem; }
+    .day-mark b { font-size: .9rem; }
+    .day-body h3 { font-size: 1.04rem; }
+  }
 </style>
+</head>
+<body>
 
 <nav class="chips" aria-label="สารบัญ">
   <ul>
@@ -538,6 +570,7 @@
       <li>จองตั๋วหุบเขาฉางผิง — ช่องทางเดียวกัน / KKday (ค้น "Changping") หรือซื้อหน้างานที่เมืองสี่ดรุณี</li>
       <li>eSIM หรือ roaming จีน + ตั้งค่า Alipay / WeChat Pay / DiDi ก่อนเดินทาง</li>
       <li>ประกันเดินทาง (ครอบคลุมกิจกรรมที่สูง / medical evacuation)</li>
+      <li>กรอกบัตร ตม. ออนไลน์ (บัตรขาเข้าจีน / Arrival Card) ผ่านเว็บ-แอป National Immigration Administration ล่วงหน้าภายใน 3 วันก่อนเดินทาง — เก็บ QR / สกรีนช็อตไว้</li>
     </ul>
   </section>
 
@@ -549,6 +582,7 @@
         <h3>เอกสารและเงิน</h3>
         <ul>
           <li>พาสปอร์ต + สำเนา/รูปถ่ายในมือถือ</li>
+          <li>กรอกบัตร ตม. ออนไลน์ (บัตรขาเข้าจีน / Arrival Card) ล่วงหน้าภายใน 3 วันก่อนเดินทาง — เก็บ QR / สกรีนช็อตไว้</li>
           <li>ใบจองตั๋วเครื่องบิน / โรงแรม / ตั๋วรถบัส / ตั๋วอุทยาน</li>
           <li>ประกันเดินทาง</li>
           <li>บัตรเครดิต / เงินสด RMB บางส่วน (เมืองเล็กบางที่รับแต่เงินสด/สแกนจีน)</li>
@@ -627,3 +661,6 @@
   </footer>
 
 </div>
+
+</body>
+</html>

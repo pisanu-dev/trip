@@ -439,6 +439,34 @@
       .place-strip { grid-template-columns: 1fr; }
       footer { flex-direction: column; }
     }
+
+    @media (max-width: 560px) {
+      body { line-height: 1.58; }
+      .hero { min-height: 84vh; }
+      .hero-inner { padding: 66px 0 36px; }
+      h1 { font-size: clamp(2.3rem, 12vw, 3.4rem); }
+      .lead { font-size: 1rem; margin-bottom: 22px; }
+      .hero-pills { gap: 8px; }
+      .pill { font-size: .82rem; padding: 7px 11px; }
+      .fact { padding: 14px 16px 16px; }
+      .section { padding: 44px 0; }
+      .band .section { padding: 40px 0; }
+      .section h2 { font-size: clamp(1.7rem, 7.5vw, 2.4rem); margin-bottom: 16px; }
+      th, td { padding: 10px 11px; font-size: .92rem; }
+      .callout, .note, .flight, .stay, .reserve { padding: 16px; }
+      .callout h3 { font-size: 1.14rem; }
+      .route { grid-template-rows: 200px auto; }
+      .route-body { padding: 18px; }
+      .tag-row { gap: 6px; margin: 12px 0 14px; }
+      .trip-tabs { gap: 8px; }
+      .tab-button { padding: 8px 13px; font-size: .92rem; }
+      .place-strip { gap: 8px; }
+      .mini-photo { min-height: 150px; }
+      .mini-photo:first-child { min-height: 190px; }
+      .gallery { grid-auto-columns: minmax(230px, 90%); }
+      .gallery-btn, .lightbox-btn { width: 38px; height: 38px; font-size: 1.4rem; }
+      .lightbox { padding: 14px; }
+    }
   </style>
 </head>
 <body>

@@ -177,21 +177,21 @@
   .plan-a { --accent: var(--maple); --accent-tint: var(--maple-tint); }
   .plan-b { --accent: var(--glacier); --accent-tint: var(--glacier-tint); }
   .days { margin-top: 1.4rem; }
-  .day { position: relative; display: grid; grid-template-columns: 2.6rem 1fr; gap: .9rem; padding-bottom: 1.6rem; }
+  .day { position: relative; display: grid; grid-template-columns: 3.2rem 1fr; gap: .9rem; padding-bottom: 1.6rem; }
   .day::before {
-    content: ""; position: absolute; left: 1.3rem; top: 2.6rem; bottom: 0;
+    content: ""; position: absolute; left: 1.6rem; top: 3rem; bottom: 0;
     width: 2px; background: var(--hairline); transform: translateX(-1px);
   }
   .day:last-child { padding-bottom: 0; }
   .day:last-child::before { display: none; }
   .day-mark {
-    position: relative; z-index: 1; width: 2.6rem; height: 2.6rem; flex: none;
+    position: relative; z-index: 1; width: 3.2rem; min-height: 2.6rem; flex: none;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    border-radius: 50%; background: var(--accent); color: #fff;
+    padding: .3rem .15rem; border-radius: .7rem; background: var(--accent); color: #fff;
     font-family: "IBM Plex Mono", monospace; line-height: 1;
   }
-  .day-mark b { font-size: 1rem; font-weight: 600; }
-  .day-mark small { font-size: .5rem; opacity: .85; margin-top: .12rem; letter-spacing: .02em; }
+  .day-mark b { font-size: 1.05rem; font-weight: 600; }
+  .day-mark small { font-size: .62rem; opacity: .9; margin-top: .2rem; letter-spacing: 0; white-space: nowrap; }
   .day-body { padding-top: .1rem; min-width: 0; }
   .day-body h3 { margin: .1rem 0 .3rem; font-size: 1.12rem; }
   .day-body .when { font-family: "IBM Plex Mono", monospace; font-size: .78rem; color: var(--ink-soft); display: block; margin-top: .5rem; }
@@ -238,10 +238,11 @@
     thead th { font-size: .78rem; }
     .callout { padding: .8rem .9rem; }
     ul, ol { padding-left: 1.05rem; }
-    .day { grid-template-columns: 2.1rem 1fr; gap: .7rem; }
-    .day::before { left: 1.05rem; top: 2.1rem; }
-    .day-mark { width: 2.1rem; height: 2.1rem; }
-    .day-mark b { font-size: .9rem; }
+    .day { grid-template-columns: 3rem 1fr; gap: .7rem; }
+    .day::before { left: 1.5rem; top: 2.9rem; }
+    .day-mark { width: 3rem; min-height: 2.4rem; padding: .28rem .1rem; }
+    .day-mark b { font-size: .98rem; }
+    .day-mark small { font-size: .54rem; margin-top: .16rem; }
     .day-body h3 { font-size: 1.04rem; }
   }
 </style>
@@ -251,11 +252,11 @@
 <nav class="chips" aria-label="สารบัญ">
   <ul>
     <li><a href="#flights">ตั๋วเครื่องบิน</a></li>
-    <li><a href="#plan">แผนหลัก (รถบัส)</a></li>
+    <li><a href="#plan">แผน A · รถบัส</a></li>
     <li><a href="#transport">การเดินทาง</a></li>
     <li><a href="#stay">ที่พัก</a></li>
     <li><a href="#cost">ค่าใช้จ่าย</a></li>
-    <li><a href="#extra">แผนเหมารถ (+ปี้เผิง)</a></li>
+    <li><a href="#extra">แผน B · เหมารถ + ปี้เผิง</a></li>
     <li><a href="#booking">ลำดับการจอง</a></li>
     <li><a href="#pack">ของที่ต้องเตรียม</a></li>
     <li><a href="#notes">หมายเหตุ</a></li>
@@ -265,12 +266,12 @@
 
 <header class="hero">
   <div class="inner">
-    <p class="kicker">Mount Siguniang · autumn · by public transport</p>
+    <p class="kicker">Mount Siguniang · autumn · Chengdu &amp; the valleys</p>
     <h1>ทริปภูเขาสี่ดรุณี<br>6 วัน 5 คืน</h1>
     <div class="facts">
       <span>2 คน</span>
       <span>18–23 ต.ค. 2026</span>
-      <span>แผนรถบัส หรือ แผนเหมารถ + ปี้เผิง</span>
+      <span>แผน A (รถบัส) หรือ แผน B (เหมารถ + ปี้เผิง)</span>
       <span>ฤดูใบไม้เปลี่ยนสี</span>
     </div>
     <p class="route">กรุงเทพฯ → เฉิงตู (Chengdu) → เมืองสี่ดรุณี (Siguniangshan Town) → เฉิงตู → กรุงเทพฯ</p>
@@ -298,7 +299,7 @@
   </section>
 
   <section id="plan" class="plan-a">
-    <h2><span class="num">02</span> แผนหลัก (รถบัส) · ภูเขาสี่ดรุณี ด้วยขนส่งสาธารณะ</h2>
+    <h2><span class="num">02</span> แผน A · ภูเขาสี่ดรุณี ด้วยรถบัส + รถไฟฟ้า</h2>
     <p class="lede">คืนที่พัก: เฉิงตู 2 คืน (18, 22 ต.ค.) · เมืองสี่ดรุณี 3 คืน (19–21 ต.ค.)</p>
 
     <div class="days">
@@ -400,7 +401,7 @@
         <tbody>
           <tr><td>TFU ↔ ตัวเมืองเฉิงตู</td><td>DiDi / แท็กซี่ (มีกระเป๋า)</td><td>รถไฟฟ้าสาย 18</td><td class="num">DiDi 120–180/เที่ยว<br>สาย 18 20–50 รวม</td></tr>
           <tr><td>ในเมืองเฉิงตู</td><td>รถไฟฟ้า (Metro) + เดิน</td><td>DiDi ระยะสั้น</td><td class="num">Metro 2–8/คน<br>DiDi 15–40</td></tr>
-          <tr><td>เฉิงตู ↔ เมืองสี่ดรุณี</td><td><strong>รถบัส</strong> สถานีฉาเตี้ยนจึ่</td><td>เหมารถ + คนขับ (แผนหัวข้อ 06)</td><td class="num">บัส ~95–140/คน/เที่ยว<br>ไป-กลับ 2 คน ~380–560</td></tr>
+          <tr><td>เฉิงตู ↔ เมืองสี่ดรุณี</td><td><strong>รถบัส</strong> สถานีฉาเตี้ยนจึ่</td><td>เหมารถ + คนขับ (แผน B)</td><td class="num">บัส ~95–140/คน/เที่ยว<br>ไป-กลับ 2 คน ~380–560</td></tr>
           <tr><td>ในเมืองสี่ดรุณี → ประตูหุบเขา</td><td>แท็กซี่ท้องถิ่น / รถโรงแรม</td><td>เดิน (ฉางผิง/ไห่จื่อ)</td><td class="num">ซวงเฉียว 30–50/เที่ยว<br>ฉางผิง เดินฟรี–15</td></tr>
           <tr><td>ตูเจียงเยี่ยน ↔ เฉิงตู (ถ้าแวะ)</td><td>รถไฟความเร็วสูง 成灌线</td><td>DiDi</td><td class="num">รถไฟ 15–25/คน<br>DiDi 200–300</td></tr>
           <tr><td>เฉิงตู → TFU (วันบิน)</td><td><strong>รถไฟฟ้าสาย 18</strong></td><td>DiDi</td><td class="num">สาย 18 20–50 รวม<br>DiDi 120–180</td></tr>
@@ -448,6 +449,15 @@
     <h2><span class="num">05</span> ตารางค่าใช้จ่ายละเอียด (2 คน)</h2>
     <p class="lede">อัตราแลกเปลี่ยนอ้างอิง <strong>1 RMB ≈ 4.9 บาท</strong> (ก.ย. 2026 · ควรเช็กก่อนเดินทาง) · ราคาอุทยาน/รถบัสอ้างอิงปี 2025 อาจปรับ</p>
 
+    <div class="callout">
+      <h3>จ่ายแล้ว (2 คน)</h3>
+      <ul style="margin-bottom:0">
+        <li>ตั๋วเครื่องบิน Spring Airlines ไป-กลับ · <strong>26,570 บาท</strong></li>
+        <li>ประกันการเดินทาง · <strong>998 บาท</strong></li>
+        <li><strong>รวมจ่ายแล้ว 27,568 บาท</strong> — ตารางด้านล่างเป็นค่าใช้จ่าย <strong>ในจีนเท่านั้น</strong> ไม่รวมสองรายการนี้</li>
+      </ul>
+    </div>
+
     <h3>ค่าตั๋วอุทยาน + รถอุทยาน</h3>
     <div class="scroll">
       <table>
@@ -461,7 +471,7 @@
       </table>
     </div>
 
-    <h3>สรุปทั้งทริป — แผนหลัก (รถบัส · ภูเขาสี่ดรุณี)</h3>
+    <h3>สรุปทั้งทริป — แผน A (รถบัส · ภูเขาสี่ดรุณี)</h3>
     <div class="scroll">
       <table>
         <thead><tr><th>หมวด</th><th class="num">ประหยัด</th><th class="num">กลาง</th><th class="num">สบาย</th></tr></thead>
@@ -473,24 +483,37 @@
           <tr><td>ที่พัก 5 คืน (เฉิงตู 2 · เมืองสี่ดรุณี 3)</td><td class="num">1,450</td><td class="num">2,850</td><td class="num">5,300</td></tr>
           <tr><td>อาหาร (2 คน × 6 วัน)</td><td class="num">1,300</td><td class="num">2,400</td><td class="num">3,600</td></tr>
           <tr><td>eSIM / ซิมจีน (2 คน)</td><td class="num">250</td><td class="num">300</td><td class="num">350</td></tr>
-          <tr><td>ประกันเดินทาง (2 คน)</td><td class="num">1,400</td><td class="num">2,000</td><td class="num">2,800</td></tr>
           <tr><td>อุปกรณ์กันหนาวที่ซื้อเพิ่ม</td><td class="num">400</td><td class="num">800</td><td class="num">1,500</td></tr>
           <tr><td>ของฝาก + เผื่อฉุกเฉิน</td><td class="num">800</td><td class="num">1,500</td><td class="num">2,500</td></tr>
-          <tr class="total"><td>รวม (RMB)</td><td class="num">~6,930</td><td class="num">~11,530</td><td class="num">~18,140</td></tr>
-          <tr class="total"><td>รวม (บาท) โดยประมาณ</td><td class="num">~33,900</td><td class="num">~56,500</td><td class="num">~88,900</td></tr>
-          <tr class="grand"><td>ต่อคน (บาท)</td><td class="num">~17,000</td><td class="num">~28,300</td><td class="num">~44,400</td></tr>
+          <tr class="total"><td>รวมค่าใช้จ่ายในจีน (RMB)</td><td class="num">~5,530</td><td class="num">~9,530</td><td class="num">~15,340</td></tr>
+          <tr class="total"><td>รวมในจีน (บาท) โดยประมาณ</td><td class="num">~27,100</td><td class="num">~46,700</td><td class="num">~75,200</td></tr>
+          <tr><td>+ จ่ายแล้ว (ตั๋วเครื่องบิน + ประกัน)</td><td class="num">27,568</td><td class="num">27,568</td><td class="num">27,568</td></tr>
+          <tr class="total"><td>รวมทั้งทริป (บาท)</td><td class="num">~54,700</td><td class="num">~74,300</td><td class="num">~102,800</td></tr>
+          <tr class="grand"><td>ต่อคน (บาท)</td><td class="num">~27,300</td><td class="num">~37,100</td><td class="num">~51,400</td></tr>
         </tbody>
       </table>
     </div>
     <div class="callout">
-      <p style="margin:0">ยังไม่รวมค่าตั๋วเครื่องบิน (จองแล้ว) · เทียบกับแผนเหมารถเดิม (ประหยัด ~52,000 บาท) → แผนรถบัสประหยัดลง <strong>~18,000 บาท</strong></p>
+      <p style="margin:0">แผน A ถูกที่สุด · เทียบกับเหมารถส่วนตัวทั้งทริป (~52,000 บาทเฉพาะในจีน) แผน A ประหยัดลง <strong>~25,000 บาท</strong> · อยากได้หุบเขาปี้เผิงเพิ่ม → <strong>แผน B</strong> หัวข้อ 06</p>
     </div>
   </section>
 
   <section id="extra" class="plan-b">
-    <h2><span class="num">06</span> แผนทางเลือก · หุบเขาปี้เผิง + ภูเขาสี่ดรุณี (เหมารถ)</h2>
-    <p class="lede">อยากได้ <strong>หุบเขาปี้เผิง (Bipenggou)</strong> จุดใบไม้แดงที่ดังที่สุดของเสฉวน ต้อง <strong>เหมารถ + คนขับ</strong> เพราะไม่มีรถบัสเชื่อมปี้เผิง–สี่ดรุณี · แผนนี้ <strong>ใช้แทนหัวข้อ 02 ทั้งหมด</strong> (เฉิงตูยังนอน 2 คืนเท่าเดิม)</p>
+    <h2><span class="num">06</span> แผน B · หุบเขาปี้เผิง + ภูเขาสี่ดรุณี (เหมารถ)</h2>
+    <p class="lede">อยากได้ <strong>หุบเขาปี้เผิง (Bipenggou)</strong> จุดใบไม้แดงที่ดังที่สุดของเสฉวน ต้อง <strong>เหมารถ + คนขับ</strong> · แผนนี้ <strong>ใช้แทนแผน A ทั้งหมด</strong> (เฉิงตูยังนอน 2 คืนเท่าเดิม) — เหมารถแค่ <strong>2 วัน (D2–D3)</strong> พาจากเฉิงตูผ่านปี้เผิงไปส่งที่เมืองสี่ดรุณี · ขากลับ (D5) นั่งรถบัสสี่ดรุณี → เฉิงตูตามปกติ</p>
     <p class="lede"><strong>คืนที่พัก:</strong> เฉิงตู 2 คืน (18, 22 ต.ค.) · มี่ยาหลัว / ปากปี้เผิง 1 คืน (19 ต.ค.) · เมืองสี่ดรุณี 2 คืน (20–21 ต.ค.)</p>
+
+    <div class="scroll">
+      <table>
+        <caption>ระยะทาง / เวลาขับ แต่ละช่วง</caption>
+        <thead><tr><th>ช่วง</th><th class="num">ระยะทาง</th><th class="num">เวลา</th><th>รถบัส / DiDi?</th></tr></thead>
+        <tbody>
+          <tr><td>เฉิงตู → หุบเขาปี้เผิง</td><td class="num">~200–230 กม.</td><td class="num">~4–4.5 ชม.</td><td>มีรถบัส เฉิงตู(ฉาเตี้ยนจึ่) → หลี่เซี่ยน + ต่อแท็กซี่ ~25 กม. · DiDi ข้ามเมืองพอมี</td></tr>
+          <tr><td><strong>หุบเขาปี้เผิง → เมืองสี่ดรุณี</strong></td><td class="num">~195–210 กม.</td><td class="num">~4.5–5 ชม.</td><td><strong>ไม่มีทั้งรถบัสและ DiDi</strong> — ถนนภูเขาข้ามช่องเขาปาหลาง ต้องเหมารถล้วน ๆ</td></tr>
+          <tr><td>เมืองสี่ดรุณี → เฉิงตู</td><td class="num">~220 กม.</td><td class="num">รถบัส ~5–7 ชม.</td><td>รถบัสวันละหลายเที่ยว (~95–140 RMB/คน) — ช่วงนี้ไม่ต้องเหมา</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="days">
       <article class="day">
@@ -509,12 +532,12 @@
       <article class="day">
         <div class="day-mark"><b>2</b><small>19 ต.ค.</small></div>
         <div class="day-body">
-          <h3>เฉิงตู → หุบเขาปี้เผิง (เหมารถ)</h3>
+          <h3>เฉิงตู → หุบเขาปี้เผิง (เหมารถ วันที่ 1)</h3>
           <ul>
-            <li>ออกเช้า · เฉิงตู → ตูเจียงเยี่ยน → เวินชวน (Wenchuan) → หลี่เซี่ยน (Lixian) → ปากปี้เผิง (~4–4.5 ชม. · ~200 กม.)</li>
+            <li>รถเหมามารับ ~07:30 · เฉิงตู → ตูเจียงเยี่ยน → เวินชวน (Wenchuan) → หลี่เซี่ยน (Lixian) → ปากปี้เผิง (~4–4.5 ชม.)</li>
             <li>บ่าย: เข้าปี้เผิงช่วงแรก นั่งรถอุทยานขึ้นโซนกลาง เดิน boardwalk เบา ๆ (ปรับตัวความสูง ~2,900–3,400 ม.)</li>
             <li>ตั๋ว 80 + รถอุทยาน 60 RMB/คน · เปิด 08:00–18:00</li>
-            <li>พักเมืองมี่ยาหลัว (米亚罗 · ~2,700 ม.) หรือโรงแรมย่านปากปี้เผิง (朴头)</li>
+            <li>พักเมืองมี่ยาหลัว (米亚罗 · ~2,700 ม.) หรือโรงแรมย่านปากปี้เผิง (朴头) — คนขับพักด้วย</li>
           </ul>
           <p class="stay"><b>ที่พัก</b> มี่ยาหลัว / ปากปี้เผิง</p>
         </div>
@@ -523,11 +546,12 @@
       <article class="day">
         <div class="day-mark"><b>3</b><small>20 ต.ค.</small></div>
         <div class="day-body">
-          <h3>ปี้เผิงครึ่งวัน → ขับไปเมืองสี่ดรุณี</h3>
+          <h3>ปี้เผิงครึ่งวัน → ขับไปเมืองสี่ดรุณี (เหมารถ วันที่ 2)</h3>
           <ul>
             <li>เช้าเข้าปี้เผิงอีกรอบให้ครบ — ทะเลสาบ + ป่าใบไม้แดงหลายเฉด + วิวยอดเขาหิมะ · ออกจากอุทยาน ~12:00</li>
-            <li>บ่าย: ขับ ปี้เผิง → เวินชวน → วอหลง (Wolong) → อุโมงค์ภูเขาปาหลาง → เมืองสี่ดรุณี (~5–5.5 ชม.) — <strong>วันนั่งรถยาว</strong> · แวะจุดชมวิวเหมาปี๋เหลียงก่อนเข้าเมือง</li>
-            <li>เย็นถึงเมืองสี่ดรุณี (~3,200 ม.) เช็กอิน กินข้าว <strong>พักตัว งดออกแรงหนัก ดื่มน้ำเยอะ งดแอลกอฮอล์</strong></li>
+            <li>บ่าย: ขับ ปี้เผิง → เวินชวน → วอหลง (Wolong) → อุโมงค์ภูเขาปาหลาง → เมืองสี่ดรุณี (~4.5–5 ชม.) — <strong>วันนั่งรถยาว</strong> · แวะจุดชมวิวเหมาปี๋เหลียงก่อนเข้าเมือง</li>
+            <li>เย็นถึงเมืองสี่ดรุณี (~3,200 ม.) <strong>คนขับส่งที่โรงแรมแล้วขับกลับเฉิงตู — จบสัญญาเหมารถ</strong></li>
+            <li>เช็กอิน กินข้าว <strong>พักตัว งดออกแรงหนัก ดื่มน้ำเยอะ งดแอลกอฮอล์</strong></li>
           </ul>
           <p class="stay"><b>ที่พัก</b> เมืองสี่ดรุณี คืนที่ 1</p>
         </div>
@@ -539,8 +563,8 @@
           <h3>หุบเขาซวงเฉียว (Shuangqiao Valley)</h3>
           <ul>
             <li><strong>ประตูเปิด 08:00 · ต้องเข้าก่อน 15:00</strong> (ประกาศใหม่ มีผล 1 เม.ย. 2026) — เข้าเช้า</li>
-            <li>รถเหมาพาไปส่งที่ประตู (~7 กม.) · ในหุบเขานั่งรถอุทยานไปปลายสุดก่อน แล้วไล่แวะลงมา</li>
-            <li>ตั๋ว 80 + รถอุทยาน 70 RMB/คน · ชมรวม 4–6 ชม.</li>
+            <li>เมือง → ประตู (~7 กม.): แท็กซี่ท้องถิ่น / รถตู้เล็ก ~30–50 RMB/เที่ยว หรือถามโรงแรมเรื่องรถรับส่งเช้า</li>
+            <li>ในหุบเขานั่งรถอุทยานไปปลายสุดก่อน แล้วไล่แวะลงมา · ตั๋ว 80 + รถอุทยาน 70 RMB/คน · ชมรวม 4–6 ชม.</li>
           </ul>
           <p class="stay"><b>ที่พัก</b> เมืองสี่ดรุณี คืนที่ 2</p>
         </div>
@@ -549,11 +573,11 @@
       <article class="day">
         <div class="day-mark"><b>5</b><small>22 ต.ค.</small></div>
         <div class="day-body">
-          <h3>หุบเขาฉางผิง (เช้า) → กลับเฉิงตู</h3>
+          <h3>เมืองสี่ดรุณี → เฉิงตู (รถบัส)</h3>
           <ul>
-            <li>เช้าเข้าหุบเขาฉางผิง (ปากทางติดเมือง) เดิน boardwalk ป่าสนสีทองถึง "หลงเชวียนผิง" ไป-กลับ ~3 ชม. · <strong>ต้องเข้าก่อน 14:30</strong></li>
-            <li>เที่ยง: รถเหมา เมืองสี่ดรุณี → อุโมงค์ปาหลาง → ตูเจียงเยี่ยน → เฉิงตู (~4–4.5 ชม.)</li>
-            <li>เย็นถึงเฉิงตู เช็กอิน (ย่านใกล้รถไฟฟ้าสาย 18 / สาย 1) · เดินไท่กู่หลี่ ซื้อของฝาก</li>
+            <li><strong>เช็ก/จองรอบรถบัสขากลับล่วงหน้า 1 วัน</strong> ที่สถานีขนส่งเมืองสี่ดรุณี หรือให้โรงแรมช่วยจอง (เที่ยวออก ~07:00–12:00 · ~95–140 RMB/คน · ~5–7 ชม.)</li>
+            <li>ถ้ารอบรถบัสมีช่วงบ่าย: เช้าเดินหุบเขาฉางผิง (ปากทางติดเมือง) สั้น ๆ ~2–3 ชม. ก่อนขึ้นรถ · ถ้ามีแต่รอบเช้า ให้ข้ามฉางผิงไป</li>
+            <li>ถึงสถานีฉาเตี้ยนจึ่ช่วงบ่าย–เย็น → รถไฟฟ้าสาย 2 เข้าเมือง · เช็กอินโรงแรม (ย่านใกล้สาย 18 / สาย 1) · เดินไท่กู่หลี่ ซื้อของฝาก</li>
           </ul>
           <p class="stay"><b>ที่พัก</b> เฉิงตู คืนที่ 2</p>
         </div>
@@ -573,53 +597,57 @@
     </div>
 
     <div class="callout">
-      <h3>สลับลำดับได้</h3>
-      <p style="margin-bottom:0">ถ้าไม่อยากเจอวันนั่งรถยาวกลางทริป ทำ <strong>สี่ดรุณีก่อน</strong> (D2 เฉิงตู → สี่ดรุณี) แล้วปิดท้ายด้วยปี้เผิงก่อนกลับเฉิงตูก็ได้ · แต่เส้นทางแบบในตาราง (ผ่านมี่ยาหลัว ~2,700 ม. → ปี้เผิง → สี่ดรุณี ~3,200 ม.) ค่อย ๆ ไต่ระดับ ปรับตัวกับความสูงได้ดีกว่า</p>
+      <h3>ประหยัดค่ารถได้อีก</h3>
+      <p style="margin:0">ช่วงที่ <strong>ต้องเหมารถจริง ๆ</strong> คือ <strong>ปี้เผิง → เมืองสี่ดรุณี (D3)</strong> เท่านั้น (ไม่มีบัส/DiDi) · ถ้าอยากประหยัด: D2 นั่งรถบัส เฉิงตู → หลี่เซี่ยน (~60–80 RMB/คน) + แท็กซี่เข้าปี้เผิง แล้วเหมารถแค่ขา D3 ขาเดียว (~1,000–1,600 RMB) — ประหยัดได้อีก ~5,000–7,000 บาท/2 คน แต่ต้องลากกระเป๋าขึ้นบัสวันแรกที่ขึ้นเขา</p>
     </div>
 
     <div class="callout cold">
-      <h3>อยากเพิ่มธารน้ำแข็งต๋ากู (Dagu Glacier) ด้วยไหม?</h3>
-      <p style="margin:0">ในกรอบ 6 วันนี้ <strong>เวลาไม่พอ</strong> — ต๋ากูอยู่คนละทิศ (อำเภอเฮยสุ่ย) ต้องต่อทริปเป็น 8 วันขึ้นไป เพิ่มเฮยสุ่ย 1–2 คืน · ต๋ากูขึ้นกระเช้าถึง ~4,860 ม. เร็วมาก เสี่ยงแพ้ความสูงสูง ต้องปรึกษาแพทย์เรื่องยา Diamox</p>
+      <h3>ธารน้ำแข็งต๋ากู (Dagu Glacier) — ไม่รวมในแผน 6 วัน</h3>
+      <p style="margin:0">ต๋ากูอยู่คนละทิศ (อำเภอเฮยสุ่ย) ต้องต่อทริปเป็น 8 วันขึ้นไป เพิ่มเฮยสุ่ย 1–2 คืน · ขึ้นกระเช้าถึง ~4,860 ม. เร็วมาก เสี่ยงแพ้ความสูงสูง ต้องปรึกษาแพทย์เรื่องยา Diamox</p>
     </div>
 
-    <h3>ค่าใช้จ่ายแผนเหมารถ (2 คน · ใช้แทนแผนรถบัส)</h3>
+    <h3>ค่าใช้จ่ายแผน B (2 คน · ในจีน · ใช้แทนตารางแผน A)</h3>
     <div class="scroll">
       <table>
         <thead><tr><th>หมวด</th><th class="num">ประหยัด</th><th class="num">กลาง</th><th class="num">สบาย</th></tr></thead>
         <tbody>
-          <tr><td>เหมารถ + คนขับ 4 วัน (D2–D5 · เฉิงตู–ปี้เผิง–สี่ดรุณี–เฉิงตู · รวมน้ำมัน/ทางด่วน/ที่พักคนขับ)</td><td class="num">3,600</td><td class="num">4,400</td><td class="num">5,200</td></tr>
-          <tr><td>ค่าเข้าอุทยาน + รถอุทยาน (ปี้เผิง 140 + ซวงเฉียว 150 + ฉางผิง 90) × 2</td><td class="num">760</td><td class="num">760</td><td class="num">760</td></tr>
+          <tr><td>เหมารถ + คนขับ 2 วัน (D2–D3 · เฉิงตู–ปี้เผิง–สี่ดรุณี · รวมน้ำมัน/ทางด่วน/ที่พักคนขับ/เที่ยวเปล่าขากลับ)</td><td class="num">2,400</td><td class="num">2,900</td><td class="num">3,400</td></tr>
+          <tr><td>รถบัส เมืองสี่ดรุณี → เฉิงตู (D5 · 2 คน)</td><td class="num">250</td><td class="num">300</td><td class="num">350</td></tr>
+          <tr><td>รถท้องถิ่น (สี่ดรุณี ↔ ประตูหุบเขา · แถวปี้เผิง/หลี่เซี่ยน)</td><td class="num">200</td><td class="num">350</td><td class="num">500</td></tr>
           <tr><td>รับส่งสนามบิน + รถไฟฟ้า/DiDi ในเฉิงตู</td><td class="num">200</td><td class="num">350</td><td class="num">600</td></tr>
+          <tr><td>ค่าเข้าอุทยาน + รถอุทยาน (ปี้เผิง 140 + ซวงเฉียว 150 + ฉางผิง 90) × 2</td><td class="num">760</td><td class="num">760</td><td class="num">760</td></tr>
           <tr><td>ที่พัก 5 คืน (เฉิงตู 2 · มี่ยาหลัว 1 · สี่ดรุณี 2)</td><td class="num">1,500</td><td class="num">2,900</td><td class="num">5,200</td></tr>
           <tr><td>อาหาร (2 คน × 6 วัน)</td><td class="num">1,300</td><td class="num">2,400</td><td class="num">3,600</td></tr>
           <tr><td>eSIM / ซิมจีน (2 คน)</td><td class="num">250</td><td class="num">300</td><td class="num">350</td></tr>
-          <tr><td>ประกันเดินทาง (2 คน)</td><td class="num">1,400</td><td class="num">2,000</td><td class="num">2,800</td></tr>
           <tr><td>อุปกรณ์กันหนาว + ของฝาก + เผื่อฉุกเฉิน</td><td class="num">1,200</td><td class="num">2,300</td><td class="num">4,000</td></tr>
-          <tr class="total"><td>รวม (RMB)</td><td class="num">~10,210</td><td class="num">~15,410</td><td class="num">~22,510</td></tr>
-          <tr class="total"><td>รวม (บาท) โดยประมาณ</td><td class="num">~50,000</td><td class="num">~75,500</td><td class="num">~110,300</td></tr>
-          <tr class="grand"><td>ต่อคน (บาท)</td><td class="num">~25,000</td><td class="num">~37,800</td><td class="num">~55,100</td></tr>
+          <tr class="total"><td>รวมค่าใช้จ่ายในจีน (RMB)</td><td class="num">~8,060</td><td class="num">~12,560</td><td class="num">~18,760</td></tr>
+          <tr class="total"><td>รวมในจีน (บาท) โดยประมาณ</td><td class="num">~39,500</td><td class="num">~61,500</td><td class="num">~92,000</td></tr>
+          <tr><td>+ จ่ายแล้ว (ตั๋วเครื่องบิน + ประกัน)</td><td class="num">27,568</td><td class="num">27,568</td><td class="num">27,568</td></tr>
+          <tr class="total"><td>รวมทั้งทริป (บาท)</td><td class="num">~67,100</td><td class="num">~89,100</td><td class="num">~119,600</td></tr>
+          <tr class="grand"><td>ต่อคน (บาท)</td><td class="num">~33,500</td><td class="num">~44,500</td><td class="num">~59,800</td></tr>
         </tbody>
       </table>
     </div>
     <div class="callout">
-      <p style="margin:0">เทียบกับแผนรถบัส (หัวข้อ 05): <strong>แพงกว่า ~16,000–19,000 บาท/2 คน</strong> ส่วนใหญ่มาจากค่าเหมารถ 4 วัน แลกกับการได้หุบเขาปี้เผิงเพิ่มโดยไม่ต้องขับเอง และคุมเวลาเองได้</p>
+      <p style="margin:0">เทียบกับแผน A (หัวข้อ 05): <strong>แพงกว่า ~12,000–15,000 บาท/2 คน</strong> เกือบทั้งหมดคือค่าเหมารถ 2 วัน แลกกับหุบเขาปี้เผิง (ใบไม้แดง) เพิ่มมา · ถ้าเหมาแค่ขา D3 (ดูกล่องด้านบน) ส่วนต่างลดเหลือ ~7,000–9,000 บาท</p>
     </div>
-    <p style="font-size:.88rem;color:var(--ink-soft)">หารถเหมา: เกสต์เฮาส์/โรงแรมในเมืองสี่ดรุณีจัดให้ได้ · แอป Ctrip หมวดเช่ารถพร้อมคนขับ (包车) · กลุ่มไลน์/เฟซทัวร์เสฉวนของคนไทย · ยืนยันราคาเหมาทั้งเส้น ไม่ใช่คิดตามกิโล และระบุจุดแวะ(เหมาปี๋เหลียง)ในข้อตกลง</p>
+    <p style="font-size:.88rem;color:var(--ink-soft)">หารถเหมา: โรงแรม/เกสต์เฮาส์ในเมืองสี่ดรุณีจัดคนขับให้ได้ (เขาวิ่งเส้นนี้ประจำ) · แอป Ctrip หมวดเช่ารถพร้อมคนขับ (包车) · กลุ่มไลน์/เฟซทัวร์เสฉวนของคนไทย · ยืนยัน <strong>ราคาเหมาทั้งเส้น ไม่คิดตามกิโล</strong> + ระบุจุดแวะ (เหมาปี๋เหลียง) + ใครจ่ายค่าที่พัก/อาหารคนขับ ในข้อตกลง</p>
   </section>
 
   <section id="booking">
     <h2><span class="num">07</span> ลำดับการจอง</h2>
     <ul class="check">
       <li class="done">ตั๋วเครื่องบิน กรุงเทพฯ – เฉิงตู – กรุงเทพฯ</li>
-      <li>ตัดสินใจ: <strong>แผนรถบัส (หัวข้อ 02)</strong> หรือ <strong>แผนเหมารถ + ปี้เผิง (หัวข้อ 06)</strong></li>
-      <li>โรงแรมเฉิงตู คืน 18 ต.ค. (ใกล้รถไฟฟ้าสาย 2 — ถ้าแผนเหมารถ ย่านไหนก็ได้)</li>
+      <li>ตัดสินใจ: <strong>แผน A · รถบัส (หัวข้อ 02)</strong> หรือ <strong>แผน B · เหมารถ + ปี้เผิง (หัวข้อ 06)</strong></li>
+      <li>โรงแรมเฉิงตู คืน 18 ต.ค. (แผน A: ใกล้รถไฟฟ้าสาย 2 · แผน B: ย่านไหนก็ได้)</li>
       <li>โรงแรมเฉิงตู คืน 22 ต.ค. (ใกล้รถไฟฟ้าสาย 18 / สาย 1)</li>
-      <li><span class="tag" style="color:var(--maple)">รถบัส</span> โรงแรมเมืองสี่ดรุณี คืน 19–21 ต.ค. (3 คืน)</li>
-      <li><span class="tag" style="color:var(--glacier)">เหมารถ</span> โรงแรมมี่ยาหลัว/ปากปี้เผิง คืน 19 ต.ค. + เมืองสี่ดรุณี คืน 20–21 ต.ค.</li>
-      <li><span class="tag" style="color:var(--maple)">รถบัส</span> จองตั๋วรถบัส เฉิงตู → เมืองสี่ดรุณี (19 ต.ค.) ผ่าน scqcq.com / Ctrip</li>
-      <li><span class="tag" style="color:var(--maple)">รถบัส</span> เช็ก/จองตั๋วรถบัสขากลับ เมืองสี่ดรุณี → เฉิงตู (22 ต.ค.)</li>
-      <li><span class="tag" style="color:var(--glacier)">เหมารถ</span> จองรถเหมา + คนขับ 4 วัน (เฉิงตู–ปี้เผิง–สี่ดรุณี–เฉิงตู) ผ่านโรงแรม / Ctrip 包车 — ยืนยันราคาเหมาทั้งเส้น + จุดแวะ</li>
-      <li><span class="tag" style="color:var(--glacier)">เหมารถ</span> จองตั๋วหุบเขาปี้เผิง (毕棚沟) — WeChat "毕棚沟景区" หรือ Ctrip/KKday (ค้น "Bipenggou") หรือซื้อหน้างาน</li>
+      <li><span class="tag" style="color:var(--maple)">A</span> โรงแรมเมืองสี่ดรุณี คืน 19–21 ต.ค. (3 คืน)</li>
+      <li><span class="tag" style="color:var(--glacier)">B</span> โรงแรมมี่ยาหลัว/ปากปี้เผิง คืน 19 ต.ค. + เมืองสี่ดรุณี คืน 20–21 ต.ค.</li>
+      <li><span class="tag" style="color:var(--maple)">A</span> จองตั๋วรถบัส เฉิงตู → เมืองสี่ดรุณี (19 ต.ค.) ผ่าน scqcq.com / Ctrip</li>
+      <li><span class="tag" style="color:var(--maple)">A</span> เช็ก/จองตั๋วรถบัสขากลับ เมืองสี่ดรุณี → เฉิงตู (22 ต.ค.)</li>
+      <li><span class="tag" style="color:var(--glacier)">B</span> จองรถเหมา + คนขับ 2 วัน (เฉิงตู–ปี้เผิง–สี่ดรุณี · D2–D3) ผ่านโรงแรม / Ctrip 包车 — ยืนยันราคาเหมาทั้งเส้น + จุดแวะ</li>
+      <li><span class="tag" style="color:var(--glacier)">B</span> เช็ก/จองตั๋วรถบัสขากลับ เมืองสี่ดรุณี → เฉิงตู (22 ต.ค.)</li>
+      <li><span class="tag" style="color:var(--glacier)">B</span> จองตั๋วหุบเขาปี้เผิง (毕棚沟) — WeChat "毕棚沟景区" หรือ Ctrip/KKday (ค้น "Bipenggou") หรือซื้อหน้างาน</li>
       <li>จองตั๋วหุบเขาซวงเฉียว — ล่วงหน้าผ่านเว็บ/WeChat "阿坝旅游网" (ก่อน 14 วัน · ก่อน 18:00 ของวันก่อนเข้า · ใช้พาสปอร์ต) หรือ KKday</li>
       <li>จองตั๋วหุบเขาฉางผิง — ช่องทางเดียวกัน / KKday (ค้น "Changping") หรือซื้อหน้างานที่เมืองสี่ดรุณี</li>
       <li>eSIM หรือ roaming จีน + ตั้งค่า Alipay / WeChat Pay / DiDi ก่อนเดินทาง</li>
@@ -690,7 +718,7 @@
       <li><strong>23 ต.ค.</strong> ไฟลต์ออก 19:05 — ใช้รถไฟฟ้าสาย 18 ไป TFU (~45 นาที) ออกจากที่พัก 14:00–14:30 ถึงสนามบิน ~16:00</li>
       <li>ช่วง 18–23 ต.ค. เป็นไฮซีซั่นใบไม้เปลี่ยนสี <strong>คนเยอะ ที่พัก/ตั๋วรถบัสเต็มเร็ว</strong> จองล่วงหน้าให้มากที่สุด</li>
       <li>อากาศบนภูเขาเปลี่ยนเร็ว เผื่อแผนสำรอง "วันเบา" · ถ้าหิมะตกหนักช่วงภูเขาปาหลาง รถบัสอาจล่าช้า/งด — เผื่อเวลาและติดตามข่าว</li>
-      <li><strong>แผนเหมารถ + ปี้เผิง (หัวข้อ 06):</strong> D3 (20 ต.ค.) เป็นวันนั่งรถยาว ~5–5.5 ชม. จากปี้เผิงข้ามมาสี่ดรุณี · ต๋ากูไม่รวมในแผน 6 วันนี้ · ทำสัญญาเหมารถให้ชัดเรื่องราคาเหมาทั้งเส้น จุดแวะ และคืนพักคนขับ</li>
+      <li><strong>แผน B (หัวข้อ 06):</strong> D3 (20 ต.ค.) เป็นวันนั่งรถยาว ~4.5–5 ชม. จากปี้เผิงข้ามมาสี่ดรุณี (คนขับส่งแล้วกลับเฉิงตู) · D5 กลับด้วยรถบัสเหมือนแผน A · ต๋ากูไม่รวมในแผน 6 วันนี้ · ทำสัญญาเหมารถให้ชัดเรื่องราคาเหมาทั้งเส้น จุดแวะ และคืนพักคนขับ</li>
     </ul>
 
     <div class="callout cold">
@@ -715,7 +743,7 @@
           <tr><td>หุบเขาฉางผิง</td><td>Changping Valley · 长坪沟</td><td>เดินชมป่าสนสีทอง ปากทางติดเมือง</td></tr>
           <tr><td>หุบเขาไห่จื่อ</td><td>Haizi Valley · 海子沟</td><td>ต้องเดินไกล/ขี่ม้า เหมาะสายเทรล (ทางเลือก)</td></tr>
           <tr><td>เมืองตูเจียงเยี่ยน</td><td>Dujiangyan · 都江堰</td><td>เมืองรองระหว่างทาง มีระบบชลประทานโบราณ</td></tr>
-          <tr><td>เมืองเวินชวน</td><td>Wenchuan · 汶川</td><td>ทางแยกบนเส้นทางแผนเหมารถ (ปี้เผิง ↔ สี่ดรุณี)</td></tr>
+          <tr><td>เมืองเวินชวน</td><td>Wenchuan · 汶川</td><td>ทางแยกบนเส้นทางแผน B (ปี้เผิง ↔ สี่ดรุณี)</td></tr>
           <tr><td>เมืองหลี่เซี่ยน</td><td>Lixian · 理县</td><td>อำเภอที่ตั้งหุบเขาปี้เผิง</td></tr>
           <tr><td>เมืองมี่ยาหลัว</td><td>Miyaluo · 米亚罗</td><td>เมืองพักบนเส้นทางปี้เผิง (~2,700 ม.)</td></tr>
           <tr><td>ภูเขาปาหลาง</td><td>Balang Mountain · 巴朗山</td><td>ช่องเขา/อุโมงค์ที่ต้องข้ามก่อนถึงเมืองสี่ดรุณี</td></tr>

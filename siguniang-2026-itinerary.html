@@ -205,8 +205,8 @@
 
   /* ---- checklist ---- */
   .check { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: .1rem; }
-  .check li { display: grid; grid-template-columns: 1.4rem 1fr; gap: .5rem; padding: .35rem 0; border-bottom: 1px solid var(--hairline); align-items: start; }
-  .check li::before { content: "☐"; color: var(--ink-soft); font-size: 1rem; line-height: 1.5; }
+  .check li { position: relative; padding: .35rem 0 .35rem 1.9rem; border-bottom: 1px solid var(--hairline); }
+  .check li::before { content: "☐"; position: absolute; left: 0; top: .35rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.6; }
   .check li.done { color: var(--ink-soft); }
   .check li.done::before { content: "☑"; color: var(--maple); }
 

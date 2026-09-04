@@ -165,6 +165,9 @@
   /* ---- tables ---- */
   .scroll { overflow-x: auto; margin: 1rem 0; border: 1px solid var(--hairline); border-radius: 8px; }
   table { border-collapse: collapse; width: 100%; font-size: .9rem; background: var(--surface); }
+  .scroll table { min-width: 22rem; }
+  .scroll table.wide { min-width: 36rem; }
+  .scroll table.nowrap1 td:first-child, .scroll table.nowrap1 th:first-child { white-space: nowrap; }
   caption { text-align: left; color: var(--ink-soft); font-size: .85rem; padding: .55rem .8rem; border-bottom: 1px solid var(--hairline); }
   th, td { text-align: left; padding: .55rem .8rem; border-bottom: 1px solid var(--hairline); vertical-align: top; }
   thead th { background: var(--surface-2); font-weight: 600; font-size: .82rem; white-space: nowrap; }
@@ -303,7 +306,7 @@
     <h2><span class="num">01</span> ตั๋วเครื่องบินที่จองแล้ว</h2>
     <p class="lede">ถึงเฉิงตูบ่าย 18 ต.ค. · ต้องกลับถึง TFU ก่อน ~16:30 วันที่ 23 ต.ค.</p>
     <div class="scroll">
-      <table>
+      <table class="wide nowrap1">
         <thead><tr><th>ขา</th><th>เที่ยวบิน</th><th>ออก</th><th>ถึง</th></tr></thead>
         <tbody>
           <tr><td>กรุงเทพฯ → เฉิงตู</td><td>Spring Airlines 9C7502</td><td class="num">18 ต.ค. 11:10<br>สุวรรณภูมิ (BKK)</td><td class="num">18 ต.ค. 15:15<br>เฉิงตูเทียนฝู่ T1 (TFU)</td></tr>
@@ -441,7 +444,7 @@
 
       <h3>ค่าใช้จ่ายแผน A (2 คน · ในจีน)</h3>
       <div class="scroll">
-      <table>
+      <table class="wide">
         <thead><tr><th>หมวด</th><th class="num">ประหยัด</th><th class="num">กลาง</th><th class="num">สบาย</th></tr></thead>
         <tbody>
           <tr><td>รถบัส เฉิงตู ↔ เมืองสี่ดรุณี (ไป-กลับ 2 คน)</td><td class="num">400</td><td class="num">500</td><td class="num">560</td></tr>
@@ -472,13 +475,13 @@
     <p class="lede"><strong>คืนที่พัก:</strong> เฉิงตู 2 คืน (18, 22 ต.ค.) · มี่ยาหลัว / ปากปี้เผิง 1 คืน (19 ต.ค.) · เมืองสี่ดรุณี 2 คืน (20–21 ต.ค.)</p>
 
     <div class="scroll">
-      <table>
+      <table class="wide nowrap1">
         <caption>ระยะทาง / เวลาขับ แต่ละช่วง</caption>
-        <thead><tr><th>ช่วง</th><th class="num">ระยะทาง</th><th class="num">เวลา</th><th>รถบัส / DiDi?</th></tr></thead>
+        <thead><tr><th>ช่วง</th><th class="num">ระยะ</th><th class="num">เวลา</th><th>วิธี · ราคา/คน</th></tr></thead>
         <tbody>
-          <tr><td>เฉิงตู → ปี้เผิง <span class="tag" style="color:var(--glacier)">D2</span></td><td class="num">~180–200 กม.</td><td class="num">รถบัส ~3.5–4 ชม.</td><td><strong>รถบัส</strong> สาย 米亚罗/马尔康 จากฉาเตี้ยนจึ่ ลงที่ 朴头 (毕棚沟路口) · ~70–90 RMB/คน</td></tr>
-          <tr><td><strong>ปี้เผิง → เมืองสี่ดรุณี</strong> <span class="tag" style="color:var(--glacier)">D3</span></td><td class="num">~195–210 กม.</td><td class="num">เหมารถ ~4.5–5 ชม.</td><td><strong>ไม่มีทั้งรถบัสและ DiDi</strong> — ถนนภูเขาข้ามช่องเขาปาหลาง ต้องเหมารถล้วน ๆ (~1,300–1,900 RMB)</td></tr>
-          <tr><td>เมืองสี่ดรุณี → เฉิงตู <span class="tag" style="color:var(--glacier)">D5</span></td><td class="num">~220 กม.</td><td class="num">รถบัส ~5–7 ชม.</td><td><strong>รถบัส</strong> วันละหลายเที่ยว (~95–140 RMB/คน) — ช่วงนี้ไม่ต้องเหมา</td></tr>
+          <tr><td><span class="tag" style="color:var(--glacier)">D2</span> เฉิงตู → ปี้เผิง</td><td class="num">~190 กม.</td><td class="num">~3.5–4 ชม.</td><td>รถบัส ~70–90 RMB (สาย 米亚罗/马尔康 · ลง 朴头)</td></tr>
+          <tr><td><span class="tag" style="color:var(--glacier)">D3</span> ปี้เผิง → เมืองสี่ดรุณี</td><td class="num">~200 กม.</td><td class="num">~4.5–5 ชม.</td><td><strong>เหมารถอย่างเดียว</strong> ~1,300–1,900 RMB (ไม่มีรถบัส/DiDi · ข้ามปาหลาง)</td></tr>
+          <tr><td><span class="tag" style="color:var(--glacier)">D5</span> เมืองสี่ดรุณี → เฉิงตู</td><td class="num">~220 กม.</td><td class="num">~5–7 ชม.</td><td>รถบัส ~95–140 RMB · วันละหลายเที่ยว</td></tr>
         </tbody>
       </table>
     </div>
@@ -589,7 +592,7 @@
 
     <h3>ค่าใช้จ่ายแผน B (2 คน · ในจีน)</h3>
     <div class="scroll">
-      <table>
+      <table class="wide">
         <thead><tr><th>หมวด</th><th class="num">ประหยัด</th><th class="num">กลาง</th><th class="num">สบาย</th></tr></thead>
         <tbody>
           <tr><td>เหมารถ ขา D3 · ปี้เผิง → เมืองสี่ดรุณี (เที่ยวเดียว · รวมน้ำมัน/ทางด่วน/เที่ยวเปล่าคนขับกลับ)</td><td class="num">1,300</td><td class="num">1,600</td><td class="num">1,900</td></tr>
@@ -620,7 +623,7 @@
   <section id="transport">
     <h2><span class="num">03</span> ตัวเลือกการเดินทาง แยกตามช่วง</h2>
     <div class="scroll">
-      <table>
+      <table class="wide nowrap1">
         <thead><tr><th>ช่วง</th><th>วิธีแนะนำ</th><th>ทางเลือก</th><th class="num">ราคา (2 คน)</th></tr></thead>
         <tbody>
           <tr><td>TFU ↔ ตัวเมืองเฉิงตู</td><td>DiDi / แท็กซี่ (มีกระเป๋า)</td><td>รถไฟฟ้าสาย 18</td><td class="num">DiDi 120–180/เที่ยว<br>สาย 18 20–50 รวม</td></tr>
@@ -643,7 +646,7 @@
     <h2><span class="num">04</span> ตัวเลือกที่พัก</h2>
     <p class="lede">ราคาต่อห้อง/คืน (เตียงคู่ 2 คน) ช่วงไฮซีซั่นใบไม้เปลี่ยนสี — <strong>จองล่วงหน้า 1–2 เดือน</strong> โดยเฉพาะเมืองสี่ดรุณี</p>
     <div class="scroll">
-      <table>
+      <table class="wide nowrap1">
         <thead><tr><th>เมือง</th><th>ประหยัด</th><th>กลาง</th><th>สูง</th></tr></thead>
         <tbody>
           <tr>
@@ -775,7 +778,7 @@
   <section id="glossary">
     <h2><span class="num">ก</span> ภาคผนวก · ชื่อสถานที่ที่ใช้ในเอกสารนี้</h2>
     <div class="scroll">
-      <table>
+      <table class="wide nowrap1">
         <thead><tr><th>ไทย</th><th>อังกฤษ / จีน</th><th>หมายเหตุ</th></tr></thead>
         <tbody>
           <tr><td>ภูเขาสี่ดรุณี</td><td>Mount Siguniang · 四姑娘山</td><td>ดูวิวจากในหุบเขา ไม่ได้ปีนขึ้น</td></tr>
